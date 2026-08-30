@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import davidPhoto from "@/assets/profilepicture.png";
 import davidPhotoHorizontal from "@/assets/profilepicture-horizontal.png";
 import davidPhotoMobile from "@/assets/profilepicture-mobile.png";
+import content from "@/data/content.json";
+
+const { hero } = content;
 
 interface HeroProps {
   onNavigate: (id: string) => void;
@@ -17,23 +20,22 @@ export default function Hero({ onNavigate }: HeroProps) {
       <div className="hero-shell section-shell grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
         <div className="hero-copy reveal flex max-w-3xl flex-col justify-between gap-8">
           <div className="hero-intro flex flex-col gap-5">
-            <p className="eyebrow">Psicologia clínica</p>
+            <p className="eyebrow">{hero.eyebrow}</p>
             <h1 className="hero-title text-4xl font-semibold leading-[1.05] tracking-normal text-foreground sm:text-5xl lg:text-6xl">
-              Um espaço seguro para cuidar da sua saúde mental e reencontrar o equilíbrio.
+              {hero.title}
             </h1>
             <p className="hero-text max-w-2xl text-lg leading-8 text-muted-foreground">
-              Acompanhamento psicológico online e presencial em Montemor-o-Novo, com uma abordagem
-              psicodinâmica centrada na escuta, na compreensão, no autoconhecimento e no ritmo de cada pessoa.
+              {hero.text}
             </p>
           </div>
           <div className="hero-actions flex flex-col gap-3 sm:flex-row">
             <Button size="lg" type="button">
               <CalendarDays className="size-4" />
-              Pedir marcação
+              {hero.primaryAction}
             </Button>
             <Button variant="outline" size="lg" onClick={() => onNavigate("primeira-consulta")}>
               <ArrowDown className="size-4" />
-              Primeira consulta
+              {hero.secondaryAction}
             </Button>
           </div>
         </div>
@@ -46,14 +48,14 @@ export default function Hero({ onNavigate }: HeroProps) {
                 <source media="(max-width: 1024px)" srcSet={davidPhotoHorizontal} />
                 <img
                   src={davidPhoto}
-                  alt="Fotografia temporária de David Santos Macedo"
+                  alt={hero.imageAlt}
                   className="h-full w-full object-cover"
                 />
               </picture>
             </div>
             <figcaption className="flex flex-col gap-1 text-sm text-muted-foreground">
-              <span className="font-semibold text-foreground">David Santos Macedo</span>
-              <span>N.º de cédula profissional 028880</span>
+              <span className="font-semibold text-foreground">{hero.captionName}</span>
+              <span>{hero.captionCredential}</span>
             </figcaption>
           </figure>
         </div>

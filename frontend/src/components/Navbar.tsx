@@ -2,15 +2,10 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import brandVisualImage from "@/assets/david-macedo-brand-emblem-transparent.png";
+import content from "@/data/content.json";
 
-const navLinks = [
-  { label: "Início", href: "home" },
-  { label: "Sobre", href: "sobre" },
-  { label: "Áreas", href: "areas" },
-  { label: "1ª Consulta", href: "primeira-consulta" },
-  { label: "Marcações", href: "modalidades" },
-  { label: "Contactos", href: "contactos" },
-];
+const { navigation } = content;
+const navLinks = navigation.links;
 
 interface NavbarProps {
   onNavigate: (id: string) => void;
@@ -85,7 +80,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
           <button
             onClick={() => handleNav("home")}
             className="group flex items-center gap-3.5 text-left leading-none"
-            aria-label="Ir para o inicio"
+            aria-label={navigation.ariaHome}
           >
             <span className="h-8 w-1 shrink-0 rounded-full bg-[linear-gradient(180deg,var(--primary),var(--accent))] transition-transform group-hover:scale-y-110 lg:hidden" />
             <span className="navbar-brand-mark hidden h-8 w-12 shrink-0 items-center justify-center overflow-visible transition-transform group-hover:scale-105 lg:flex">
@@ -97,11 +92,11 @@ export default function Navbar({ onNavigate }: NavbarProps) {
               />
             </span>
             <span className="bg-[linear-gradient(135deg,var(--primary),var(--accent-foreground))] bg-clip-text text-base font-semibold tracking-tight text-transparent">
-              David Santos Macedo
+              {navigation.brandName}
             </span>
           </button>
 
-          <nav className="desktop-nav hidden items-center gap-1 lg:flex" aria-label="Navegação principal">
+          <nav className="desktop-nav hidden items-center gap-1 lg:flex" aria-label={navigation.ariaDesktop}>
             {navLinks.map(({ label, href }) => (
               <button
                 key={href}
@@ -118,7 +113,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             size="icon"
             className="mobile-nav-toggle lg:hidden"
             onClick={() => setMenuOpen((open) => !open)}
-            aria-label="Abrir menu"
+            aria-label={navigation.ariaMenu}
             aria-expanded={menuOpen}
           >
             {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -132,7 +127,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
         }`}
         aria-hidden={!menuOpen}
       >
-        <nav className="flex h-full flex-col justify-center gap-2 px-5" aria-label="Menu móvel">
+        <nav className="flex h-full flex-col justify-center gap-2 px-5" aria-label={navigation.ariaMobile}>
           {navLinks.map(({ label, href }) => (
             <button
               key={href}

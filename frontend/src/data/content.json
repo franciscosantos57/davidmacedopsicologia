@@ -1,0 +1,154 @@
+{
+  "navigation": {
+    "brandName": "David Santos Macedo",
+    "ariaHome": "Ir para o inicio",
+    "ariaDesktop": "Navegação principal",
+    "ariaMobile": "Menu móvel",
+    "ariaMenu": "Abrir menu",
+    "links": [
+      { "label": "Início", "href": "home" },
+      { "label": "Sobre", "href": "sobre" },
+      { "label": "Áreas", "href": "areas" },
+      { "label": "1ª Consulta", "href": "primeira-consulta" },
+      { "label": "Marcações", "href": "modalidades" },
+      { "label": "Contactos", "href": "contactos" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Psicologia clínica",
+    "title": "Um espaço seguro para cuidar da sua saúde mental e reencontrar o equilíbrio.",
+    "text": "Acompanhamento psicológico online e presencial em Montemor-o-Novo, com uma abordagem psicodinâmica centrada na escuta, na compreensão, no autoconhecimento e no ritmo de cada pessoa.",
+    "primaryAction": "Pedir marcação",
+    "secondaryAction": "Primeira consulta",
+    "imageAlt": "Fotografia temporária de David Santos Macedo",
+    "captionName": "David Santos Macedo",
+    "captionCredential": "N.º de cédula profissional 028880"
+  },
+  "about": {
+    "eyebrow": "Apresentação",
+    "title": "Um percurso dedicado a compreender o comportamento humano.",
+    "paragraphs": [
+      [
+        { "text": "O meu percurso na compreensão do comportamento humano começou na " },
+        { "text": "Universidade de Évora", "emphasis": "primary" },
+        { "text": ", onde me licenciei em Sociologia. Movido pelo desejo de intervir de forma mais próxima e individual, licenciei-me também em Psicologia e especializei-me em " },
+        { "text": "Psicologia Clínica no ISPA", "emphasis": "primary" },
+        { "text": ", em Lisboa." }
+      ],
+      [
+        { "text": "Ao longo do meu percurso, desenvolvi competências com diferentes faixas etárias: estagiei em Lisboa no apoio a " },
+        { "text": "crianças institucionalizadas", "emphasis": "accent" },
+        { "text": " e, mais tarde, já no âmbito da Ordem dos Psicólogos Portugueses, dediquei-me à intervenção com a " },
+        { "text": "população idosa", "emphasis": "accent" },
+        { "text": ". Esta amplitude de experiências deu-me uma visão profunda do ciclo de vida e do sofrimento humano em várias fases." }
+      ],
+      [
+        { "text": "Atualmente, foco a minha prática clínica no acompanhamento de adultos, trabalhando sob a " },
+        { "text": "abordagem psicodinâmica", "emphasis": "primary" },
+        { "text": ", uma vertente que permite explorar as causas profundas do mal-estar, promovendo um " },
+        { "text": "autoconhecimento real e duradouro", "emphasis": "accent" },
+        { "text": "." }
+      ]
+    ]
+  },
+  "services": {
+    "eyebrow": "Áreas de intervenção",
+    "title": "Acompanhamento em momentos de sofrimento, mudança e procura de sentido.",
+    "cardHint": "Clique para saber mais",
+    "items": [
+      {
+        "title": "Ansiedade e ataques de pânico",
+        "detail": "Compreensão dos sinais físicos, pensamentos recorrentes e padrões que mantêm a sensação de ameaça."
+      },
+      {
+        "title": "Depressão, tristeza profunda e burnout",
+        "detail": "Espaço para dar sentido ao desgaste, à perda de energia e à dificuldade em estar presente."
+      },
+      {
+        "title": "Gestão do stress e desenvolvimento pessoal",
+        "detail": "Trabalho sobre limites, exigência interna e formas mais sustentáveis de estar consigo."
+      },
+      {
+        "title": "Dificuldades relacionais",
+        "detail": "Exploração de vínculos, conflitos e formas de comunicar necessidades com maior clareza."
+      },
+      {
+        "title": "Luto e transições de vida",
+        "detail": "Apoio em processos de perda, separação ou fases de vida que pedem reorganização emocional."
+      }
+    ]
+  },
+  "firstSession": {
+    "eyebrow": "Primeira consulta",
+    "title": "Tem receio da primeira consulta?",
+    "intro": "Saiba como funciona a primeira conversa e o que pode esperar deste primeiro encontro.",
+    "cardTitle": "Como funciona a primeira consulta?",
+    "paragraphs": [
+      [
+        { "text": "Dar o primeiro passo pode parecer difícil, mas a primeira consulta " },
+        { "text": "não é um questionário rígido nem um momento de avaliação", "highlight": true },
+        { "text": ". É, acima de tudo, um " },
+        { "text": "espaço seguro de encontro", "highlight": true },
+        { "text": "." }
+      ],
+      [
+        { "text": "O foco inicial será " },
+        { "text": "ouvir a sua história com atenção, empatia e sem julgamento", "highlight": true },
+        { "text": ". Este tempo serve para o conhecer, explorar o que o traz até aqui e perceber, de forma tranquila, como o posso ajudar." }
+      ],
+      [
+        { "text": "Não precisa de saber exatamente o que dizer ou por onde começar", "highlight": true },
+        { "text": ". Vamos conversar sobre o momento atual da sua vida, as suas preocupações e as suas expectativas em relação à terapia." }
+      ],
+      [
+        { "text": "O objetivo não é encontrar soluções mágicas logo no primeiro dia, mas criar uma base de" },
+        { "text": " confiança e segurança", "highlight": true },
+        { "text": " para que, juntos, possamos começar a desenhar o seu caminho de bem-estar, ao seu ritmo." }
+      ]
+    ]
+  },
+  "sessions": {
+    "eyebrow": "Marcações",
+    "title": "Escolha a modalidade que melhor se adapta a si.",
+    "items": [
+      {
+        "title": "Consultas online",
+        "text": "Realizadas através do Google Meet, com calendarização gerida por Google Calendar.",
+        "imageAlt": "Ambiente calmo para consulta online por videochamada",
+        "actionLabel": "Marcação"
+      },
+      {
+        "title": "Consultas presenciais",
+        "text": "Disponíveis em Montemor-o-Novo, na HM Fisio, com estacionamento mesmo à porta.",
+        "imageAlt": "Espaço da HM Fisio em Montemor-o-Novo",
+        "actionLabel": "Localização",
+        "actionHref": "https://maps.app.goo.gl/vLp9y8zY5fjHbGdR7"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contactos",
+    "title": "Fale diretamente comigo.",
+    "text": "Para esclarecer dúvidas ou pedir mais informação, utilize um dos contactos abaixo.",
+    "items": [
+      {
+        "type": "email",
+        "title": "Email",
+        "value": "dsm.psic@gmail.com",
+        "href": "mailto:dsm.psic@gmail.com"
+      },
+      {
+        "type": "phone",
+        "title": "Telefone",
+        "value": "+351 968 622 163",
+        "href": "tel:+351968622163"
+      },
+      {
+        "type": "instagram",
+        "title": "Instagram",
+        "value": "@davidmacedopsicologia",
+        "href": "https://www.instagram.com/davidmacedopsicologia"
+      }
+    ]
+  }
+}
