@@ -50,7 +50,7 @@ export default function Services() {
   };
 
   return (
-    <section id="areas" className="bg-muted/55">
+    <section id="areas" className="palette-band">
       <div className="section-shell flex flex-col gap-12">
         <div className="reveal flex max-w-2xl flex-col gap-4">
           <p className="eyebrow">Áreas de intervenção</p>
@@ -75,21 +75,21 @@ export default function Services() {
                   <span
                     className="service-card-inner relative flex min-h-76 w-full rounded-lg"
                   >
-                    <span className="service-card-face service-card-front absolute inset-0 flex flex-col justify-between gap-8 rounded-lg border border-border bg-background p-6 shadow-sm [backface-visibility:hidden]">
-                      <span className="service-card-icon flex size-11 items-center justify-center rounded-lg bg-[linear-gradient(135deg,var(--primary),var(--accent))] shadow-sm shadow-primary/20">
-                        <Icon className="size-6 text-primary-foreground" aria-hidden="true" />
-                      </span>
-                      <span className="service-card-content flex flex-col gap-3">
-                        <span className="service-card-title bg-[linear-gradient(135deg,var(--foreground),var(--primary))] bg-clip-text text-base font-semibold leading-6 text-transparent">
+                    <span className="service-card-face service-card-front absolute inset-0 flex flex-col justify-between gap-8 rounded-lg border border-primary/20 bg-card p-6 [backface-visibility:hidden]">
+                      <span className="service-card-main flex flex-col gap-5">
+                        <span className="service-card-icon flex size-11 items-center justify-center rounded-lg bg-[linear-gradient(135deg,var(--accent),var(--accent-foreground))]">
+                          <Icon className="size-6 text-background" aria-hidden="true" />
+                        </span>
+                        <span className="service-card-title text-base font-semibold leading-6 text-primary">
                           {title}
                         </span>
-                        <span className="service-card-hint bg-[linear-gradient(135deg,var(--primary),var(--accent-foreground))] bg-clip-text text-sm font-medium text-transparent">
-                          Clique para saber mais
-                        </span>
+                      </span>
+                      <span className="service-card-hint text-sm font-medium text-accent-foreground">
+                        Clique para saber mais
                       </span>
                     </span>
 
-                    <span className="service-card-face service-card-back absolute inset-0 flex items-center justify-center rounded-lg border border-primary/30 bg-[linear-gradient(145deg,var(--secondary),var(--muted))] p-6 text-center text-secondary-foreground [backface-visibility:hidden]">
+                    <span className="service-card-face service-card-back absolute inset-0 flex items-center justify-center rounded-lg border border-accent/45 bg-[linear-gradient(145deg,var(--brand-brown),var(--brand-blue-soft))] p-6 text-center text-secondary-foreground [backface-visibility:hidden]">
                       <span className="text-sm leading-6">{detail}</span>
                     </span>
                   </span>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import brandVisualImage from "@/assets/david-macedo-brand-emblem-transparent.png";
 
 const navLinks = [
   { label: "Início", href: "home" },
@@ -19,6 +20,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
+  const transparentHeader = !menuOpen && (active === "home" || active === "contactos");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,18 +74,28 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "border-b border-border bg-background/92 shadow-sm backdrop-blur-md"
-            : "bg-background/70 backdrop-blur-sm"
+          transparentHeader
+            ? "border-b border-border bg-background/92 shadow-sm backdrop-blur-md lg:border-transparent lg:bg-transparent lg:shadow-none lg:backdrop-blur-none"
+            : scrolled || menuOpen
+              ? "border-b border-border bg-background/92 shadow-sm backdrop-blur-md"
+              : "bg-transparent"
         }`}
       >
         <div className="flex h-[72px] w-full items-center justify-between px-5 sm:px-8 lg:px-10">
           <button
             onClick={() => handleNav("home")}
-            className="group flex items-center gap-3 text-left leading-none"
+            className="group flex items-center gap-3.5 text-left leading-none"
             aria-label="Ir para o inicio"
           >
-            <span className="h-8 w-1 rounded-full bg-[linear-gradient(180deg,var(--primary),var(--accent))] transition-transform group-hover:scale-y-110" />
+            <span className="h-8 w-1 shrink-0 rounded-full bg-[linear-gradient(180deg,var(--primary),var(--accent))] transition-transform group-hover:scale-y-110 lg:hidden" />
+            <span className="navbar-brand-mark hidden h-8 w-12 shrink-0 items-center justify-center overflow-visible transition-transform group-hover:scale-105 lg:flex">
+              <img
+                src={brandVisualImage}
+                alt=""
+                className="h-full w-full object-contain"
+                aria-hidden="true"
+              />
+            </span>
             <span className="bg-[linear-gradient(135deg,var(--primary),var(--accent-foreground))] bg-clip-text text-base font-semibold tracking-tight text-transparent">
               David Santos Macedo
             </span>

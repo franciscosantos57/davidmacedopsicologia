@@ -1,4 +1,5 @@
 import { Instagram, Mail, Phone } from "lucide-react";
+import brandVisualImage from "@/assets/david-macedo-brand-emblem-transparent.png";
 
 const email = "dsm.psic@gmail.com";
 const phone = "+351 968 622 163";
@@ -29,16 +30,23 @@ const contacts = [
 
 export default function Contact() {
   return (
-    <section id="contactos" className="bg-primary text-primary-foreground">
-      <div className="section-shell flex flex-col gap-12">
+    <section id="contactos" className="contact-section palette-hero relative overflow-hidden text-primary">
+      <div className="contact-shell section-shell relative z-10 flex flex-col gap-10">
         <div className="reveal flex max-w-3xl flex-col gap-5 self-center text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground/75">
+          <div className="contact-brand-visual" aria-hidden="true">
+            <img
+              src={brandVisualImage}
+              alt=""
+              className="contact-brand-image"
+            />
+          </div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-foreground">
             Contactos
           </p>
           <h2 className="text-3xl font-semibold tracking-normal sm:text-4xl">
             Fale diretamente comigo.
           </h2>
-          <p className="text-base leading-8 text-primary-foreground/78">
+          <p className="text-base leading-8 text-muted-foreground">
             Para esclarecer dúvidas ou pedir mais informação, utilize um dos contactos abaixo.
           </p>
         </div>
@@ -52,7 +60,7 @@ export default function Contact() {
               rel={href.startsWith("http") ? "noreferrer" : undefined}
               className={`contact-card reveal reveal-delay-${(index % 3) + 1} group flex min-h-48 flex-col justify-between gap-8 rounded-lg p-6`}
             >
-              <span className="contact-card-icon flex size-10 items-center justify-center rounded-lg text-primary-foreground">
+              <span className="contact-card-icon flex size-10 items-center justify-center rounded-lg text-primary">
                 <Icon className="size-5" aria-hidden="true" />
               </span>
               <span className="flex min-w-0 flex-col gap-2">

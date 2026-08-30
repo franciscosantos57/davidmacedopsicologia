@@ -1,6 +1,7 @@
 import { CalendarDays, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import onlineConsultationImage from "@/assets/onlineconsultation.png";
+import onlineConsultationMobileImage from "@/assets/onlineconsultation-mobile.png";
+import onlineConsultationImage from "@/assets/onlineconsultation-palette.png";
 import hmFisioImage from "@/assets/hmfisio.png";
 
 const sessionTypes = [
@@ -8,9 +9,11 @@ const sessionTypes = [
     title: "Consultas online",
     text: "Realizadas através do Google Meet, com calendarização gerida por Google Calendar.",
     image: onlineConsultationImage,
+    mobileImage: onlineConsultationMobileImage,
     imageAlt: "Ambiente calmo para consulta online por videochamada",
     actionLabel: "Marcação",
-    imageClassName: "",
+    imageClassName: "session-card-online-image",
+    imageFrameClassName: "session-card-image-mobile-portrait",
   },
   {
     title: "Consultas presenciais",
@@ -20,12 +23,14 @@ const sessionTypes = [
     actionLabel: "Localização",
     actionHref: "https://maps.app.goo.gl/vLp9y8zY5fjHbGdR7",
     imageClassName: "brightness-[0.96] contrast-[0.92] saturate-[0.78] sepia-[0.14] hue-rotate-[345deg]",
+    mobileImage: undefined,
+    imageFrameClassName: "",
   },
 ];
 
 export default function Sessions() {
   return (
-    <section id="modalidades" className="bg-muted/55">
+    <section id="modalidades" className="palette-band">
       <div className="section-shell">
         <div className="mx-auto flex w-full max-w-5xl flex-col gap-12">
           <div className="reveal flex flex-col gap-4">
@@ -40,19 +45,32 @@ export default function Sessions() {
           <div className="sessions-grid grid w-full gap-5 md:grid-cols-2">
             {sessionTypes.map(
               (
-                { title, text, image, imageAlt, actionLabel, actionHref, imageClassName },
+                {
+                  title,
+                  text,
+                  image,
+                  mobileImage,
+                  imageAlt,
+                  actionLabel,
+                  actionHref,
+                  imageClassName,
+                  imageFrameClassName,
+                },
                 index
               ) => (
                 <article
                   key={title}
-                  className={`session-card reveal reveal-delay-${index + 1} overflow-hidden rounded-lg border border-border bg-background shadow-sm`}
+                  className={`session-card reveal reveal-delay-${index + 1} overflow-hidden rounded-lg border border-primary/20 bg-card`}
                 >
-                  <div className="session-card-image aspect-[16/8.6] overflow-hidden bg-muted">
-                    <img
-                      src={image}
-                      alt={imageAlt}
-                      className={`h-full w-full object-cover ${imageClassName}`}
-                    />
+                  <div className={`session-card-image aspect-[16/8.6] overflow-hidden bg-muted ${imageFrameClassName}`}>
+                    <picture className="block h-full w-full">
+                      {mobileImage ? <source srcSet={mobileImage} media="(max-width: 767px)" /> : null}
+                      <img
+                        src={image}
+                        alt={imageAlt}
+                        className={`h-full w-full object-cover ${imageClassName}`}
+                      />
+                    </picture>
                   </div>
                   <div className="session-card-body flex flex-col gap-5 p-5">
                     <div className="flex flex-col gap-3">

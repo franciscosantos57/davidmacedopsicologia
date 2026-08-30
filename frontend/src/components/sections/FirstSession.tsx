@@ -2,7 +2,7 @@ import { MessageSquareText } from "lucide-react";
 
 export default function FirstSession() {
   return (
-    <section id="primeira-consulta" className="bg-background">
+    <section id="primeira-consulta" className="palette-section">
       <div className="section-shell grid gap-12 lg:grid-cols-[0.82fr_1.18fr]">
         <div className="reveal flex flex-col gap-5">
           <p className="eyebrow">Primeira consulta</p>
@@ -14,8 +14,8 @@ export default function FirstSession() {
           </p>
         </div>
 
-        <article className="reveal reveal-delay-1 flex flex-col gap-5 border-l-2 border-primary/35 pl-6 sm:pl-8">
-          <MessageSquareText className="size-7 text-primary" aria-hidden="true" />
+        <article className="reveal reveal-delay-1 flex flex-col gap-5 border-l-2 border-accent/60 pl-6 sm:pl-8">
+          <MessageSquareText className="size-7 text-accent-foreground" aria-hidden="true" />
           <h3 className="text-xl font-semibold">Como funciona a primeira consulta?</h3>
           <div className="flex flex-col gap-5 text-base leading-8 text-muted-foreground">
             <p>
@@ -31,7 +31,7 @@ export default function FirstSession() {
               <span className="marker-highlight">
                 ouvir a sua história com atenção, empatia e sem julgamento
               </span>
-              . Este tempo serve para conhecer quem é, explorar o que o traz até aqui e perceber, de forma
+              . Este tempo serve para o conhecer, explorar o que o traz até aqui e perceber, de forma
               tranquila, como o posso ajudar.
             </p>
             <p>

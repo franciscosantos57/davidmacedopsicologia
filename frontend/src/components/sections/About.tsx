@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="sobre" className="bg-background">
+    <section id="sobre" className="palette-section">
       <div className="section-shell grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
         <div className="reveal flex flex-col gap-4">
           <p className="eyebrow">Apresentação</p>
@@ -25,7 +25,7 @@ export default function About() {
             </strong>{" "}
             e, mais tarde, já no âmbito da Ordem dos Psicólogos Portugueses, dediquei-me à intervenção com
             a <strong className="font-semibold text-accent-foreground">população idosa</strong>. Esta
-            amplitude de experiências deu-me uma visão profunda do ciclo de vida e do sofrimento humano.
+            amplitude de experiências deu-me uma visão profunda do ciclo de vida e do sofrimento humano em várias fases.
           </p>
           <p>
             Atualmente, foco a minha prática clínica no acompanhamento de adultos, trabalhando sob a
