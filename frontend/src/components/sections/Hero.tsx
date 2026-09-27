@@ -16,7 +16,7 @@ export default function Hero({ onNavigate }: HeroProps) {
   return (
     <section
       id="home"
-      className="viewport-page palette-hero relative overflow-hidden"
+      className="palette-hero relative overflow-hidden"
     >
       <div className="hero-shell section-shell grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
         <div className="hero-copy reveal flex max-w-3xl flex-col justify-between gap-8">

@@ -154,7 +154,6 @@ section[id] > .section-shell {
   max-height: 100%;
 }
 
-#home > .section-shell,
 #modalidades > .section-shell,
 #contactos > .section-shell {
   height: 100%;
