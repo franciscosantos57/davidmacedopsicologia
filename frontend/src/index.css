@@ -160,6 +160,11 @@ section[id] > .section-shell {
   height: 100%;
 }
 
+#modalidades > .section-shell {
+  display: flex;
+  align-items: center;
+}
+
 .section-shell {
   @apply mx-auto w-full max-w-6xl px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-10;
 }
@@ -968,6 +973,24 @@ section[id] > .section-shell {
 
   .hero-figure figcaption {
     line-height: 1.2;
+  }
+}
+
+@supports (height: 100dvh) {
+  #modalidades.viewport-page,
+  #contactos.viewport-page {
+    height: 100dvh;
+    min-height: 100dvh;
+    max-height: 100dvh;
+  }
+
+  @media (max-width: 1024px) {
+    #modalidades.viewport-page,
+    #contactos.viewport-page {
+      height: calc(100dvh - 72px);
+      min-height: calc(100dvh - 72px);
+      max-height: calc(100dvh - 72px);
+    }
   }
 }
 
