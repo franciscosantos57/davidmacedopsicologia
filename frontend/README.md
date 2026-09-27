@@ -13,7 +13,5 @@ npm run build
 
 ## Conteúdo a substituir
 
-- Foto temporária: `src/assets/david-placeholder.svg`
-- Link de agendamento online: constante `onlineBookingUrl` em `src/components/sections/Contact.tsx`
-- Email: constante `email` em `src/components/sections/Contact.tsx`
-- Localização: constante `mapsUrl` em `src/components/sections/Contact.tsx`
+- Fotos: `src/assets/profilepicture*.png`
+- Conteúdo, contactos e links de marcação/localização: `src/data/content.json`

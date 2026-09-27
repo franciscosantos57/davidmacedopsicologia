@@ -5,7 +5,8 @@ import davidPhotoHorizontal from "@/assets/profilepicture-horizontal.png";
 import davidPhotoMobile from "@/assets/profilepicture-mobile.png";
 import content from "@/data/content.json";
 
-const { hero } = content;
+const { hero, sessions } = content;
+const onlineBookingUrl = sessions.items[0].actionHref;
 
 interface HeroProps {
   onNavigate: (id: string) => void;
@@ -15,7 +16,7 @@ export default function Hero({ onNavigate }: HeroProps) {
   return (
     <section
       id="home"
-      className="palette-hero relative overflow-hidden"
+      className="viewport-page palette-hero relative overflow-hidden"
     >
       <div className="hero-shell section-shell grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
         <div className="hero-copy reveal flex max-w-3xl flex-col justify-between gap-8">
@@ -29,9 +30,11 @@ export default function Hero({ onNavigate }: HeroProps) {
             </p>
           </div>
           <div className="hero-actions flex flex-col gap-3 sm:flex-row">
-            <Button size="lg" type="button">
-              <CalendarDays className="size-4" />
-              {hero.primaryAction}
+            <Button size="lg" asChild>
+              <a href={onlineBookingUrl} target="_blank" rel="noreferrer">
+                <CalendarDays className="size-4" />
+                {hero.primaryAction}
+              </a>
             </Button>
             <Button variant="outline" size="lg" onClick={() => onNavigate("primeira-consulta")}>
               <ArrowDown className="size-4" />

@@ -23,7 +23,7 @@ const sessionAssets = [
 
 export default function Sessions() {
   return (
-    <section id="modalidades" className="palette-band">
+    <section id="modalidades" className="viewport-page palette-band">
       <div className="section-shell">
         <div className="mx-auto flex w-full max-w-5xl flex-col gap-12">
           <div className="reveal flex flex-col gap-4">
@@ -48,6 +48,7 @@ export default function Sessions() {
                 index
               ) => {
                 const asset = sessionAssets[index];
+                const ActionIcon = index === 0 ? CalendarDays : MapPin;
 
                 return (
                   <article
@@ -72,13 +73,13 @@ export default function Sessions() {
                       {actionHref ? (
                         <Button asChild className="w-full sm:w-36">
                           <a href={actionHref} target="_blank" rel="noreferrer">
-                            <MapPin className="size-4" />
+                            <ActionIcon className="size-4" />
                             {actionLabel}
                           </a>
                         </Button>
                       ) : (
                         <Button type="button" className="w-full sm:w-36">
-                          <CalendarDays className="size-4" />
+                          <ActionIcon className="size-4" />
                           {actionLabel}
                         </Button>
                       )}

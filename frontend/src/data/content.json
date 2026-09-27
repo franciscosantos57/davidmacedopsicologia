@@ -115,7 +115,8 @@
         "title": "Consultas online",
         "text": "Realizadas através do Google Meet, com calendarização gerida por Google Calendar.",
         "imageAlt": "Ambiente calmo para consulta online por videochamada",
-        "actionLabel": "Marcação"
+        "actionLabel": "Marcação",
+        "actionHref": "https://cal.com/david-santos-macedo"
       },
       {
         "title": "Consultas presenciais",
@@ -146,8 +147,8 @@
       {
         "type": "instagram",
         "title": "Instagram",
-        "value": "@davidmacedopsicologia",
-        "href": "https://www.instagram.com/davidmacedopsicologia"
+        "value": "@davidsantosmacedo.psi",
+        "href": "https://www.instagram.com/davidsantosmacedo.psi"
       }
     ]
   }
