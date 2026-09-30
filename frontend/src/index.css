@@ -570,6 +570,7 @@ section[id] > .section-shell {
 
   .hero-shell {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto minmax(0, 1fr) auto;
     align-content: stretch;
     height: 100%;
@@ -604,10 +605,11 @@ section[id] > .section-shell {
   }
 
   .hero-media {
-    @apply justify-start;
-    align-items: stretch;
+    /* The mobile frame must not shrink to the image's intrinsic width. */
+    display: block;
     order: 2;
     width: 100%;
+    min-width: 0;
     min-height: 0;
   }
 
@@ -620,8 +622,10 @@ section[id] > .section-shell {
 
   .hero-figure {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr) auto;
     width: 100%;
+    min-width: 0;
     max-width: none !important;
     height: 100%;
     min-height: 0;
@@ -629,12 +633,21 @@ section[id] > .section-shell {
   }
 
   .hero-photo {
+    position: relative;
     height: 100%;
     max-height: 100%;
     width: 100%;
     max-width: none;
     min-height: 0;
     aspect-ratio: auto;
+  }
+
+  /* Reserve the whole frame before the selected picture source is decoded. */
+  .hero-photo > picture {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .services-grid {

@@ -50,8 +50,8 @@ export default function Hero({ onNavigate }: HeroProps) {
           <figure className="hero-figure flex h-full w-full max-w-[420px] flex-col justify-between gap-4">
             <div className="hero-photo aspect-[4/5] overflow-hidden rounded-lg border border-accent/35 bg-card shadow-xl shadow-black/25">
               <picture className="block h-full w-full">
-                <source media="(max-width: 430px)" srcSet={`${davidPhotoMobileSmall} 480w, ${davidPhotoMobile} 960w`} sizes="100vw" />
-                <source media="(max-width: 1024px)" srcSet={`${davidPhotoHorizontalSmall} 768w, ${davidPhotoHorizontal} 1536w`} sizes="100vw" />
+                <source media="(max-width: 430px)" srcSet={`${davidPhotoMobileSmall} 480w, ${davidPhotoMobile} 960w`} sizes="100vw" width={960} height={720} />
+                <source media="(max-width: 1024px)" srcSet={`${davidPhotoHorizontalSmall} 768w, ${davidPhotoHorizontal} 1536w`} sizes="100vw" width={1536} height={864} />
                 <img
                   src={davidPhoto}
                   srcSet={`${davidPhotoSmall} 420w, ${davidPhoto} 840w`}
