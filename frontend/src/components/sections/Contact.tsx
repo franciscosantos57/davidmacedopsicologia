@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Instagram, Mail, Phone } from "lucide-react";
-import brandVisualImage from "@/assets/david-macedo-brand-emblem-transparent.png";
+import brandVisualImage from "@/assets/optimized/david-macedo-brand-emblem-transparent-640.webp";
 import content from "@/data/content.json";
 
 const { contact } = content;
@@ -43,6 +43,10 @@ export default function Contact() {
           <div className="contact-brand-visual" aria-hidden="true">
             <img
               src={brandVisualImage}
+              width={640}
+              height={316}
+              loading="lazy"
+              decoding="async"
               alt=""
               className="contact-brand-image"
             />

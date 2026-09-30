@@ -8,6 +8,10 @@
       content="Psicologia clínica para adultos com David Santos Macedo. Consultas online e presenciais em Montemor-o-Novo."
     />
     <meta name="theme-color" content="#102738" />
+    <!-- Match Hero's picture sources so the visible photo starts before React. -->
+    <link rel="preload" as="image" type="image/webp" media="(max-width: 430px)" imagesrcset="/src/assets/optimized/profilepicture-mobile-480.webp 480w, /src/assets/optimized/profilepicture-mobile-960.webp 960w" imagesizes="100vw" fetchpriority="high" />
+    <link rel="preload" as="image" type="image/webp" media="(430px < width <= 1024px)" imagesrcset="/src/assets/optimized/profilepicture-horizontal-768.webp 768w, /src/assets/optimized/profilepicture-horizontal-1536.webp 1536w" imagesizes="100vw" fetchpriority="high" />
+    <link rel="preload" as="image" type="image/webp" media="(width > 1024px)" imagesrcset="/src/assets/optimized/profilepicture-420.webp 420w, /src/assets/optimized/profilepicture-840.webp 840w" imagesizes="420px" fetchpriority="high" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
     <title>David Santos Macedo | Psicologia Clínica</title>
   </head>

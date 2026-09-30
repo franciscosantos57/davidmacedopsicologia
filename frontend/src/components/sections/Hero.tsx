@@ -1,8 +1,11 @@
 import { ArrowDown, CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import davidPhoto from "@/assets/profilepicture.png";
-import davidPhotoHorizontal from "@/assets/profilepicture-horizontal.png";
-import davidPhotoMobile from "@/assets/profilepicture-mobile.png";
+import davidPhoto from "@/assets/optimized/profilepicture-840.webp";
+import davidPhotoSmall from "@/assets/optimized/profilepicture-420.webp";
+import davidPhotoHorizontal from "@/assets/optimized/profilepicture-horizontal-1536.webp";
+import davidPhotoHorizontalSmall from "@/assets/optimized/profilepicture-horizontal-768.webp";
+import davidPhotoMobile from "@/assets/optimized/profilepicture-mobile-960.webp";
+import davidPhotoMobileSmall from "@/assets/optimized/profilepicture-mobile-480.webp";
 import content from "@/data/content.json";
 
 const { hero, sessions } = content;
@@ -19,7 +22,7 @@ export default function Hero({ onNavigate }: HeroProps) {
       className="palette-hero relative overflow-hidden"
     >
       <div className="hero-shell section-shell grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
-        <div className="hero-copy reveal flex max-w-3xl flex-col justify-between gap-8">
+        <div className="hero-copy flex max-w-3xl flex-col justify-between gap-8">
           <div className="hero-intro flex flex-col gap-5">
             <p className="eyebrow">{hero.eyebrow}</p>
             <h1 className="hero-title text-4xl font-semibold leading-[1.05] tracking-normal text-foreground sm:text-5xl lg:text-6xl">
@@ -43,14 +46,20 @@ export default function Hero({ onNavigate }: HeroProps) {
           </div>
         </div>
 
-        <div className="hero-media reveal reveal-delay-1 flex lg:justify-end">
+        <div className="hero-media flex lg:justify-end">
           <figure className="hero-figure flex h-full w-full max-w-[420px] flex-col justify-between gap-4">
             <div className="hero-photo aspect-[4/5] overflow-hidden rounded-lg border border-accent/35 bg-card shadow-xl shadow-black/25">
               <picture className="block h-full w-full">
-                <source media="(max-width: 430px)" srcSet={davidPhotoMobile} />
-                <source media="(max-width: 1024px)" srcSet={davidPhotoHorizontal} />
+                <source media="(max-width: 430px)" srcSet={`${davidPhotoMobileSmall} 480w, ${davidPhotoMobile} 960w`} sizes="100vw" />
+                <source media="(max-width: 1024px)" srcSet={`${davidPhotoHorizontalSmall} 768w, ${davidPhotoHorizontal} 1536w`} sizes="100vw" />
                 <img
                   src={davidPhoto}
+                  srcSet={`${davidPhotoSmall} 420w, ${davidPhoto} 840w`}
+                  sizes="420px"
+                  width={840}
+                  height={1042}
+                  fetchPriority="high"
+                  loading="eager"
                   alt={hero.imageAlt}
                   className="h-full w-full object-cover"
                 />

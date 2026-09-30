@@ -1,22 +1,33 @@
 import { CalendarDays, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import onlineConsultationMobileImage from "@/assets/onlineconsultation-mobile.png";
-import onlineConsultationImage from "@/assets/onlineconsultation-palette.png";
-import hmFisioImage from "@/assets/hmfisio.png";
+import onlineConsultationMobileImage from "@/assets/optimized/onlineconsultation-mobile-940.webp";
+import onlineConsultationMobileSmall from "@/assets/optimized/onlineconsultation-mobile-480.webp";
+import onlineConsultationImage from "@/assets/optimized/onlineconsultation-palette-1200.webp";
+import onlineConsultationSmall from "@/assets/optimized/onlineconsultation-palette-640.webp";
+import hmFisioImage from "@/assets/optimized/hmfisio-1200.webp";
+import hmFisioSmall from "@/assets/optimized/hmfisio-640.webp";
 import content from "@/data/content.json";
 
 const { sessions } = content;
 const sessionAssets = [
   {
     image: onlineConsultationImage,
+    imageSmall: onlineConsultationSmall,
     mobileImage: onlineConsultationMobileImage,
+    mobileImageSmall: onlineConsultationMobileSmall,
+    width: 1200,
+    height: 675,
     imageClassName: "session-card-online-image",
     imageFrameClassName: "session-card-image-mobile-portrait",
   },
   {
     image: hmFisioImage,
+    imageSmall: hmFisioSmall,
+    width: 1200,
+    height: 900,
     imageClassName: "brightness-[0.96] contrast-[0.92] saturate-[0.78] sepia-[0.14] hue-rotate-[345deg]",
     mobileImage: undefined,
+    mobileImageSmall: undefined,
     imageFrameClassName: "",
   },
 ];
@@ -57,9 +68,15 @@ export default function Sessions() {
                   >
                     <div className={`session-card-image aspect-[16/8.6] overflow-hidden bg-muted ${asset.imageFrameClassName}`}>
                       <picture className="block h-full w-full">
-                        {asset.mobileImage ? <source srcSet={asset.mobileImage} media="(max-width: 767px)" /> : null}
+                        {asset.mobileImage ? <source srcSet={`${asset.mobileImageSmall} 480w, ${asset.mobileImage} 940w`} sizes="100vw" media="(max-width: 767px)" /> : null}
                         <img
                           src={asset.image}
+                          srcSet={`${asset.imageSmall} 640w, ${asset.image} 1200w`}
+                          sizes="(max-width: 767px) 100vw, 512px"
+                          width={asset.width}
+                          height={asset.height}
+                          loading="lazy"
+                          decoding="async"
                           alt={imageAlt}
                           className={`h-full w-full object-cover ${asset.imageClassName}`}
                         />

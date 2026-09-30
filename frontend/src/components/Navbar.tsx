@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import brandVisualImage from "@/assets/david-macedo-brand-emblem-transparent.png";
+import brandVisualImage from "@/assets/optimized/david-macedo-brand-emblem-transparent-128.webp";
 import content from "@/data/content.json";
 
 const { navigation } = content;
@@ -86,6 +86,9 @@ export default function Navbar({ onNavigate }: NavbarProps) {
             <span className="navbar-brand-mark hidden h-8 w-12 shrink-0 items-center justify-center overflow-visible transition-transform group-hover:scale-105 lg:flex">
               <img
                 src={brandVisualImage}
+                width={128}
+                height={63}
+                decoding="async"
                 alt=""
                 className="h-full w-full object-contain"
                 aria-hidden="true"
