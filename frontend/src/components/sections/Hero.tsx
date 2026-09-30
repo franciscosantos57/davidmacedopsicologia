@@ -22,7 +22,7 @@ export default function Hero({ onNavigate }: HeroProps) {
       className="palette-hero relative overflow-hidden"
     >
       <div className="hero-shell section-shell grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
-        <div className="hero-copy flex max-w-3xl flex-col justify-between gap-8">
+        <div className="hero-copy reveal flex max-w-3xl flex-col justify-between gap-8">
           <div className="hero-intro flex flex-col gap-5">
             <p className="eyebrow">{hero.eyebrow}</p>
             <h1 className="hero-title text-4xl font-semibold leading-[1.05] tracking-normal text-foreground sm:text-5xl lg:text-6xl">
@@ -46,7 +46,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           </div>
         </div>
 
-        <div className="hero-media flex lg:justify-end">
+        <div className="hero-media reveal reveal-delay-1 flex lg:justify-end">
           <figure className="hero-figure flex h-full w-full max-w-[420px] flex-col justify-between gap-4">
             <div className="hero-photo aspect-[4/5] overflow-hidden rounded-lg border border-accent/35 bg-card shadow-xl shadow-black/25">
               <picture className="block h-full w-full">
