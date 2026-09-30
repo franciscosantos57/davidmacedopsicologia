@@ -75,7 +75,8 @@ export default function Sessions() {
                           sizes="(max-width: 767px) 100vw, 512px"
                           width={asset.width}
                           height={asset.height}
-                          loading="lazy"
+                          loading="eager"
+                          fetchPriority="low"
                           decoding="async"
                           alt={imageAlt}
                           className={`h-full w-full object-cover ${asset.imageClassName}`}

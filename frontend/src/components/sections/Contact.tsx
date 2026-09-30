@@ -45,7 +45,8 @@ export default function Contact() {
               src={brandVisualImage}
               width={640}
               height={316}
-              loading="lazy"
+              loading="eager"
+              fetchPriority="low"
               decoding="async"
               alt=""
               className="contact-brand-image"
